@@ -95,7 +95,7 @@
 			      <h2>Defining the router</h2>
 			      <pre><code>
 				  App.Router.map(function() {
-				  this.resource('user');
+				     this.resource('user');
 				  });				  
 			      </pre></code>
 			    </section>
@@ -124,24 +124,56 @@
 			      <aside class="notes">Templates are a key part of defining your user interface. Handlebars is the client-side library used in Ember and the expressions provided by the library are used extensively when creating the UI for your application. Here's a simple example</aside>
 			    </section>
 			    <section>
-			      <h2>Template logic</h2>
+			      <h2>Template implementation</h2>
 			      <p><a href="http://handlebarsjs.com/">handlebars</a></p>
 			      <pre><code>
-				  <h1>Comments</h1>
-
-				  <div id="comments">
-				    {{#each comments}}
+				<h1>Comments</h1>
+				<div id="comments">
+				  {{#each comments}}
 				    <h2><a href="/posts/{{../permalink}}#{{id}}">{{title}}</a></h2>
 				    <div>{{body}}</div>
-				    {{/each}}
-				  </div>
+				  {{/each}}
+				</div>
 			      </pre></code>
 			    </section>
 			  </section>
 			  <section>
-			    <h2>Route</h2>
-			    <pre><code>
-			    </pre></code>
+			    <section>
+			      <h2>Route</h2>
+			      <p>very important part of your application.</p>
+			      <ul>
+				<li>fetch model</li>
+				<li>set up controller</li>
+				<li>redirect</li>
+			      </ul>
+			    </section>
+			    <section>
+			      <h2>Route definition</h2>
+			      <pre><code>
+				  App.UserRoute = Ember.Route.extend({
+				    model: function() {
+				     return $.getJSON('/user.json');
+				    }
+				  });
+			      </pre></code>
+			    </section>
+			  </section>
+			  <section>
+			    <section>
+			      <h2>Controller</h2>
+			      <p>In ember.js a controller decorates a model.<br> Use a controller for display specific properties</p>
+			    </section>
+			    <section>
+			      <h2>Controller definition</h2>
+			      <pre><code>
+				  App.UserController = Ember.ObjectController.extend({
+				     twitter_url: function() {
+  				       var twitter = this.get('model.tw_account'),
+				       return 'http://github.com/nillusius';
+				     }.property('model.tw_account')
+				  });
+			      </code></pre>
+			    </section>
 			  </section>
 			  <section>
 			    <h2>Overview</h2>
