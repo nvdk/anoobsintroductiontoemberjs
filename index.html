@@ -89,13 +89,13 @@
 			  <section>
 			    <section>
 			      <h2>Routing</h2>
-			      <p>In ember.js routing is front and center. When a route is called ember will find or generate the corresponding Route, Controller, View, and Template</p>
+			      <p>In ember.js routing is front and center. When a route is called ember will find the corresponding template</p>
 			    </section>
 			    <section>
 			      <h2>Defining the router</h2>
 			      <pre><code>
 				  App.Router.map(function() {
-				  this.resource('users');
+				  this.resource('user');
 				  });				  
 			      </pre></code>
 			    </section>
@@ -117,45 +117,46 @@
 			    </section>
 			    <section>
 			      <h2>Templates (cont.)</h2>
-			      <p>index template:</p>
+			      <p>user template:</p>
 			      <pre><code>
 				  <h2><strong>Hello, {{userName}}</strong></h2>
 			      </code></pre>
 			      <aside class="notes">Templates are a key part of defining your user interface. Handlebars is the client-side library used in Ember and the expressions provided by the library are used extensively when creating the UI for your application. Here's a simple example</aside>
 			    </section>
 			    <section>
-			      <h2>Templates (cont.)</h2>
+			      <h2>Template logic</h2>
 			      <p><a href="http://handlebarsjs.com/">handlebars</a></p>
-			      mar			    </section>
+			      <pre><code>
+				  <h1>Comments</h1>
+
+				  <div id="comments">
+				    {{#each comments}}
+				    <h2><a href="/posts/{{../permalink}}#{{id}}">{{title}}</a></h2>
+				    <div>{{body}}</div>
+				    {{/each}}
+				  </div>
+			      </pre></code>
+			    </section>
 			  </section>
 			  <section>
-			    <h2>Template</h2>
-			    <code>
-			      <script type="text/x-handlebars" data-template-name="application"><b>{{outlet}}</b></script>
-			    </code>
+			    <h2>Route</h2>
+			    <pre><code>
+			    </pre></code>
 			  </section>
-
+			  <section>
+			    <h2>Overview</h2>
+			    <img src="emberarch.png">
+			  </section>
 			  <section>
 			    <h2>Questions</h2>
 			  </section>
 
 			  <Section>
 			    <h2>Thank you!</h2>
-			    <dl>
-			      <dd>twitter</dd><dt> @nillusius</dt>
-			    </dl>
-			    <dl>
-			      <dd>github</dd>
-			      <dt>github.com/nvdk</dt>
-			    </dl>
-			    <dl>
-			      <dd>mail</dd>
-			      <dt>progster@gmail.com</dt>
-			    </dl>
-			    <dl>
-			      <dd>www</dd>
-			      <dt>niels.vandekeybus.eu</dt>
-			    </dl>
+			      <dt><a href="">@nillusius</a></dt>
+			      <dt><a href="http://github.com/nvdk">github.com/nvdk</a></dt>
+			      <dt><a href="mailto:progster@SPAMMENOT.gmail.com">progster @ gmail</a></dt>
+			      <dt><a href="http://niels.vandekeybus.eu">niels.vandekeybus.eu</a></dt>
 			  </section>
 			</div>
 		</div>
