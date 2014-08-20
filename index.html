@@ -43,92 +43,79 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 			  <section>
-			    <h1>A noobs introduction to ember.js</h1>
-			    
+			    <h1>A noobs introduction to ember.js</h1>		    
 			    <p>
-			      <small><a href="http://niels.vandekeybus.eu">Niels Vandekeybus</a> <br>Semtech developer at <a href="http://tenforce.com">TenForce</a></small>
-			      
-			    </p>
+			      <small><a href="http://niels.vandekeybus.eu">Niels Vandekeybus</a> <br>Semtech developer at <a href="http://tenforce.com">TenForce</a></small>			      			    </p>
 			  </section>
 
 			  <section>
 			    <section>
-			      <h2>What is this sh*t</h2>
-			      <p>
+			      <h2>What is Ember</h2>
+			      <blockquote Cite="http://en.wikipedia.org/wiki/JavaScript_framework#Frameworks">
 				ember.js is a framework for creating ambitious web applications
-			      </p>
-
+			      </blockquote>
 			      <aside class="notes">					  
-				An All-Inclusive JavaScript MVC Framework, currently 1.6.1, stable
+				There are a lot of JavaScript libraries available, and most are really good at providing the traditional DOM-centric interactions that your typical websites need. But when it's time to build a manageable code base for a single-page app, that's where a whole suite of new frameworks come in to smooth things out.
 			      </aside>
 			    </section>
+
 			    <section>
-			      <blockquote cite="http://en.wikipedia.org/wiki/JavaScript_framework#Frameworks">
-				&ldquo; "... a library of pre-written JavaScript which allows for easier development of JavaScript-based applications, especially for AJAX and other web-centric technologies.&rdquo;
-			      </blockquote>
-			    </section>
-			    <section>
-			      <h2>full stack</h2>
-			      <p>Ember.js provides all the tools you need to build a complex web application.</p>
-			      <aside class="notes">					  
+			      <h2>Full stack</h2>
+			      <ul>
+				<li>data-binding</li>
+				<li>event routing</li>
+				<li>state management</li>
+			      </ul>
+			      <aside class="notes">				  
 				multiple libraries useful for web development into a single cohesive software stack for web developers to use. build your own gmail without worrying about jquery, ajax calls and browser compatibility.
 			      </aside>				    
 			    </section>
+			    <section>
+			      <h2>Feel at home</h2>
+			      <ul>
+				<li>MVC driven (though not webMVC)</li>
+				<li>client-side templates</li>
+				<li>Convention over configuration</li>
+			      </ul>
+			    </section>
+			  </section>
+			  <section>
+			    <section>
+			      <h2>Core concepts</h2>
+			      <p>understand how Ember.js works</p>
+			      <aside class="notes">				  
+				Before you start hacking at code, it's important to understand how Ember.js works and that you grok the moving parts that make up an Ember app. Let's take a look at those parts and how they relate to each other.
+			      </aside>
+			    </section>
+			    <section>
+			      <h2>Templates</h2>
+			      <pre><code data-trim>
+				  <h2><strong>Hello, {{userName}}</strong></h2>
+			      </code></pre>
+			      <aside class="notes">Templates are a key part of defining your user interface. Handlebars is the client-side library used in Ember and the expressions provided by the library are used extensively when creating the UI for your application. Here's a simple example:</aside>
+			    </section>
+			    <section>
+			    </section>
+			    <section>
+			    </section>
+
+			  </section>
+			  <section>
+			    <code>window.Demo = Ember.application.create();</code>
+			    <ul>
+			      <li>Creates a namespace</li>
+			      <li>Bind Event listeners</li>
+			      <li>Renders the application template</li>
+			      <li>Starts the application routes</li>
+			    </ul>
+			  </section>
+			  <section>
+			    <h2>Template</h2>
+			    <code>
+			      <script type="text/x-handlebars" data-template-name="application"><b>{{outlet}}</b></script>
+			    </code>
 			  </section>
 
-			  <!-- Example of nested vertical slides -->
-			  <section>
-			    <section>
-			      <h2>Why should you use it</h2>
-			    </section>
-			    <section>
-			      <h2>only worry about the important stuff</h2>
-			      <p>ember.js takes care of the small stuff</p>
-			      <aside class="notes">					  						  
-				To make ambitious web applications, you have to use abstractions that hide complexity, encourage structure, and remove boilerplate code. 
-			      </aside>				    
-			    </section>
-			    <section>
-			      <h2>Conventions over configuration<h2>
-
-			    </section>
-			    <section>
-			      <h2>But really that's why</h2>
-
-			    </section>
-			  </section>
-
-			  <section>
-			    <h2>Let's code</h2>
-			    <p>Define app here</p>
-			    <p>explain it is a namespace</p>
-			  </section>
-			  <section>
-			    <section>
-			      <h2>Starting simple</h2>
-			      <p>a template and a route</p>
-			    </section>
-			    <section>
-			      <!-- template example here -->
-			      <!-- route here -->
-			    </section>
-			  </section>
-			  <section>
-			    <h2>Let's add some data</h2>
-			    <!-- example with model -->
-			  </section>
-			  <section>
-			    <h2>Bindings!</h2>
-			  </section>
-			  <section>
-			    <h2>Controller!</h2>
-			  </section>
-			  <section>
-			    <h2>A viewmodel! </h2>
-			  </section>
-			  <section>
-			    <h2>overview</h2>
-			  </section>
 			  <section>
 			    <h2>Questions</h2>
 			  </section>
@@ -152,7 +139,6 @@
 			    </dl>
 			  </section>
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
