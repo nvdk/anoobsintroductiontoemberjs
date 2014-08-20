@@ -80,34 +80,53 @@
 			    </section>
 			  </section>
 			  <section>
-			    <section>
-			      <h2>Core concepts</h2>
-			      <p>understand how Ember.js works</p>
-			      <aside class="notes">				  
-				Before you start hacking at code, it's important to understand how Ember.js works and that you grok the moving parts that make up an Ember app. Let's take a look at those parts and how they relate to each other.
-			      </aside>
-			    </section>
-			    <section>
-			      <h2>Templates</h2>
-			      <pre><code data-trim>
-				  <h2><strong>Hello, {{userName}}</strong></h2>
-			      </code></pre>
-			      <aside class="notes">Templates are a key part of defining your user interface. Handlebars is the client-side library used in Ember and the expressions provided by the library are used extensively when creating the UI for your application. Here's a simple example:</aside>
-			    </section>
-			    <section>
-			    </section>
-			    <section>
-			    </section>
-
+			    <h2>Core concepts</h2>
+			    <p>understand how Ember.js works</p>
+			    <aside class="notes">				  
+			      Before you start hacking at code, it's important to understand how Ember.js works and that you grok the moving parts that make up an Ember app. Let's take a look at those parts and how they relate to each other.
+			    </aside>
 			  </section>
 			  <section>
-			    <code>window.Demo = Ember.application.create();</code>
-			    <ul>
-			      <li>Creates a namespace</li>
-			      <li>Bind Event listeners</li>
-			      <li>Renders the application template</li>
-			      <li>Starts the application routes</li>
-			    </ul>
+			    <section>
+			      <h2>Routing</h2>
+			      <p>In ember.js routing is front and center. When a route is called ember will find or generate the corresponding Route, Controller, View, and Template</p>
+			    </section>
+			    <section>
+			      <h2>Defining the router</h2>
+			      <pre><code>
+				  App.Router.map(function() {
+				  this.resource('users');
+				  });				  
+			      </pre></code>
+			    </section>
+			  </section>
+			  <section>
+			    <section>
+			      <h2>Templates</h2>
+			      <p>application template:</p>
+			      <pre><code>
+				  <header>
+				    <h1>Ambitious app</h1>
+				  </header>
+				  <div>
+				    {{outlet}}
+				  </div>
+				  <footer>content cc-by-sa, code apache 2.0</footer>
+			      </pre></code>
+			      <p>{{outlet}} will be filled in with the appropriate template</p>
+			    </section>
+			    <section>
+			      <h2>Templates (cont.)</h2>
+			      <p>index template:</p>
+			      <pre><code>
+				  <h2><strong>Hello, {{userName}}</strong></h2>
+			      </code></pre>
+			      <aside class="notes">Templates are a key part of defining your user interface. Handlebars is the client-side library used in Ember and the expressions provided by the library are used extensively when creating the UI for your application. Here's a simple example</aside>
+			    </section>
+			    <section>
+			      <h2>Templates (cont.)</h2>
+			      <p><a href="http://handlebarsjs.com/">handlebars</a></p>
+			      mar			    </section>
 			  </section>
 			  <section>
 			    <h2>Template</h2>
